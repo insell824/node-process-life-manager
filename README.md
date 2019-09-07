@@ -1,10 +1,11 @@
+> This is local package (not publishing).
+
 # Node.js Process Life Manager for Server
 This is a manager that can call events when a Node process starts or dead.  
 Compatible with `Ctrl+C`, `nodemon` and `heroku`.
 
 ## Getting Started
 1. Install node-process-life-manager using npm:
-> This is local package (not publishing).
 ```bash
 npm i insell824/node-process-life-manager
 ```
