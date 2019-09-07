@@ -9,7 +9,7 @@ npm i insell824/node-process-life-manager
 
 
 ## Usage
-```node
+```node:app.js
 const http = require('http');
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
