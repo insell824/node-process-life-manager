@@ -1,32 +1,37 @@
-# node-process-life-manager
-This is a manager that can call events when a Node process starts or dead.
-
+# Node.js Process Life Manager for Server
+This is a manager that can call events when a Node process starts or dead.  
+Compatible with　`Ctrl+C`, `nodemon` and `heroku`.
 
 ## Install
 ```node
-npm i ____
+npm i insell824/node-process-life-manager
 ```
 
 
 ## Usage
 ```node
-require()
-var processLife =  require('___/process-life-manager')
+const http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World!\n');
+}).listen(1337, '127.0.0.1');
+
+const processLife =  require('node-process-life-manager')
 processLife.addEndListener(function () {
   return new Promise(function (resolve, reject) {
-    log.info('Async Process completed.')
+    console.log('Async Process completed.')
     resolve()
   })
 })
 
 processLife.addEndListener(function () {
   return new Promise(function (resolve, reject) {
-    log.info('Async Process refused.')
+    console.log('Async Process refused.')
     reject(new Error('ErrorMessage(Test)!'))
   })
 })
 
 processLife.addEndListener(function () {
-  log.info('Process completed.')
+  console.log('Process completed.')
 })
 ```
