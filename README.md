@@ -16,7 +16,7 @@ http.createServer(function (req, res) {
   res.end('Hello World!\n');
 }).listen(1337, '127.0.0.1');
 
-const processLife =  require('node-process-life-manager')
+const processLife =  require('insell-node-process-life-manager')
 processLife.addEndListener(function () {
   return new Promise(function (resolve, reject) {
     console.log('Async Process completed.')
@@ -34,4 +34,9 @@ processLife.addEndListener(function () {
 processLife.addEndListener(function () {
   console.log('Process completed.')
 })
+```
+
+## Uninstall
+```node
+npm uni insell-node-process-life-manager
 ```
