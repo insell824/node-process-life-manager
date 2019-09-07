@@ -1,6 +1,6 @@
 {
   "name": "node-process-life-manager",
-  "version": "1.0.1",
+  "version": "2.0.1",
   "description": "This is a manager that can call events when a Node process starts or dead.",
   "main": "lib/index.js",
   "private": true,
